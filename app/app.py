@@ -1,12 +1,7 @@
 from flask import Flask
+from config import Configuration
+
+
 
 app = Flask(__name__)
-
-
-@app.route('/')
-def hello_world():
-    return 'alloha bglsdijfuhgoiuesahrgioseughoiuregh'
-
-
-if __name__ == '__main__':
-    app.run()
+app.config.from_object(Configuration)
